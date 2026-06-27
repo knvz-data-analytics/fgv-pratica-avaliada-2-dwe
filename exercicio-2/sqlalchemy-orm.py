@@ -30,7 +30,7 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 # 4. Operações de CRUD
 
-def create_product(name: str, price: float, description: str = None):
+def create_product(name: str, price: float, description: str = None): # type: ignore
     """CREATE: Adiciona um novo produto ao banco"""
     # with: garante o gerenciamento da sessão (abertura/fechamento auto)
     with SessionLocal() as session:
